@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShopWave — Minimal E‑commerce</title>
+  <title>ShopWave — Minimal E-commerce</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <script defer src="assets/main.js"></script>
+  <style>
+    img { max-width: 100%; height: auto; display: block; border-radius: 12px; }
+    .hero-banner { margin-bottom: 1rem; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -19,6 +23,11 @@
   </header>
 
   <main class="container page">
+    <!-- Banner image -->
+    <section class="hero-banner">
+      <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1600&auto=format&fit=crop" alt="Store banner">
+    </section>
+
     <section class="hero store-hero">
       <h1>Fresh drops, fair prices</h1>
       <p>Simple demo store with a tiny cart using localStorage. No backend required.</p>
@@ -34,7 +43,62 @@
       </select>
     </section>
 
-    <section id="products" class="grid"></section>
+    <!-- Preloaded products with real images -->
+    <section id="products" class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1612152607435-8cd73b0f2b0c?q=80&w=1200&auto=format&fit=crop" alt="Aero Cap">
+        <div class="card-body">
+          <h4>Aero Cap</h4>
+          <p class="price">$24.00</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1548883354-7622d02d6db0?q=80&w=1200&auto=format&fit=crop" alt="Glow Hoodie">
+        <div class="card-body">
+          <h4>Glow Hoodie</h4>
+          <p class="price">$59.00</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1520975922218-7d07a0f4f63f?q=80&w=1200&auto=format&fit=crop" alt="Wave Tee">
+        <div class="card-body">
+          <h4>Wave Tee</h4>
+          <p class="price">$28.00</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=1200&auto=format&fit=crop" alt="Orbit Mouse">
+        <div class="card-body">
+          <h4>Orbit Mouse</h4>
+          <p class="price">$39.00</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop" alt="Neon Keyboard">
+        <div class="card-body">
+          <h4>Neon Keyboard</h4>
+          <p class="price">$89.00</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1685090068982-6866967570f0?q=80&w=1200&auto=format&fit=crop" alt="Canvas Tote">
+        <div class="card-body">
+          <h4>Canvas Tote</h4>
+          <p class="price">$19.00</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
