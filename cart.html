@@ -5,12 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Cart — ShopWave</title>
   <link rel="stylesheet" href="assets/styles.css" />
-  <script defer src="assets/cart.js"></script>
+  <script defer src="assets/main.js"></script>
   <style>
-    img { max-width: 80px; height: auto; border-radius: 8px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
-    .total { font-weight: bold; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 12px; }
+    .hero-banner { margin-bottom: 1rem; }
+    .cart-items { display: grid; gap: 1rem; margin-top: 2rem; }
+    .cart-item { display: flex; gap: 1rem; align-items: center; background: white; padding: 1rem; border-radius: 12px; }
+    .cart-item img { width: 100px; border-radius: 8px; }
+    .cart-item-info { flex: 1; }
+    .cart-item h4 { margin: 0 0 0.25rem; }
+    .cart-summary { margin-top: 2rem; text-align: right; }
+    .checkout-btn {
+      padding: 12px 20px;
+      background: #000;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .checkout-btn:hover { background: #ff4444; }
   </style>
 </head>
 <body>
@@ -25,20 +39,30 @@
   </header>
 
   <main class="container page">
+    <!-- Banner image -->
+    <section class="hero-banner">
+      <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1600&auto=format&fit=crop" alt="Shopping banner">
+    </section>
+
     <h1>Your Cart</h1>
-    <table id="cartTable">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Qty</th>
-          <th>Total</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-    <h2 id="grandTotal">Total: $0.00</h2>
+    <p>Review your items and proceed to checkout.</p>
+
+    <section class="cart-items" id="cartItems">
+      <!-- Example cart item -->
+      <div class="cart-item">
+        <img src="https://images.unsplash.com/photo-1548883354-7622d02d6db0?q=80&w=800&auto=format&fit=crop" alt="Glow Hoodie">
+        <div class="cart-item-info">
+          <h4>Glow Hoodie</h4>
+          <p>$59.00</p>
+        </div>
+        <button class="btn">Remove</button>
+      </div>
+    </section>
+
+    <div class="cart-summary">
+      <h3>Total: $59.00</h3>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -46,6 +70,17 @@
       <div>
         <h4>ShopWave</h4>
         <p>Demo storefront for learning and prototyping.</p>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p>All products are fictional.</p>
       </div>
     </div>
   </footer>
