@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Cart — ShopWave</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/cart.js"></script>
+  <style>
+    img { max-width: 80px; height: auto; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
+    .total { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">ShopWave</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cart.html" class="active">Cart <span id="cartCount" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1>Your Cart</h1>
+    <table id="cartTable">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <h2 id="grandTotal">Total: $0.00</h2>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>ShopWave</h4>
+        <p>Demo storefront for learning and prototyping.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
